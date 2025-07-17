@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <form action="" method="post">
+        {% csrf_token %}
+        <label for="">OTP :</label>
+        <input type="number" name="otp">
+        <button type="submit">Send mail</button>
+                         {% if incorrect %}
+                        <div class="alert alert-primary" role="alert">
+                        {{incorrect}}
+                        </div>
+                        {% endif %}
+    </form>
+</body>
+</html>
